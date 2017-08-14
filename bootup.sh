@@ -3,6 +3,7 @@ sudo iptables -A FORWARD -i cni0 -j ACCEPT
 sudo iptables -A FORWARD -o cni0 -j ACCEPT
 sudo su -
 sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+sudo su -
 sudo echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > /etc/apt/sources.list.d/kubernetes.list'
 sudo apt-get update -y
 sudo apt-get install -y kubeadm
