@@ -1,4 +1,4 @@
-#!bin/sh
+#!bin/bash
 sudo iptables -A FORWARD -i cni0 -j ACCEPT
 sudo iptables -A FORWARD -o cni0 -j ACCEPT
 sudo su -
