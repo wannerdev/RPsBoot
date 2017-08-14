@@ -2,7 +2,7 @@
 sudo iptables -A FORWARD -i cni0 -j ACCEPT
 sudo iptables -A FORWARD -o cni0 -j ACCEPT
 sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-sudo echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > sudo /etc/apt/sources.list.d/kubernetes.list'
+sudo echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > sudo /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update -y
 sudo apt-get install -y kubeadm
 sudo apt-get install -y oracle-java8-jdk
