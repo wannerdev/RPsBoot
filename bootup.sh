@@ -7,9 +7,8 @@ sudo cp ./kubernetes.list /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get -y update 
 sudo apt-get -y install kubeadm
 sudo apt-get -y install oracle-java8-jdk
-printf 'allow-hotplug eth0\n iface eth0 inet static\n address 192.168.1.42\n netmask 255.255.255.0\n gateway 192.168.1.1\n domain_name_servers=8.8.8.8, 8.8.4.4' > ./eth0
-sudo cp ./eth0 /etc/network/interfaces.d/eth0
 wget https://bitbucket.org/logicline/kubernetes-hacknight/downloads/blinkled-1.0-all.jar -P /home/pirate/blinkled
+sudo wget https://bitbucket.org/logicline/kubernetes-hacknight/downloads/libjffi-1.2.so -P /usr/lib/
 printf '#!/bin/sh -e
 #
 # rc.local
